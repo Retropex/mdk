@@ -22,6 +22,7 @@ import { ContainerDetailPage, ContainersListPage } from "./ContainersPage";
 import { ControlPage } from "./ControlPage";
 import { DashboardPage } from "./DashboardPage";
 import { MonitoringPage } from "./MonitoringPage";
+import { OceanPage } from "./OceanPage";
 import { PoolsPage } from "./PoolsPage";
 import type { Container, History, Overview } from "./types";
 import { get, powerModesForDevice } from "./utils";
@@ -343,6 +344,7 @@ export function SitePage(): JSX.Element {
               element={<MonitoringPage base={base} powermeters={data.powermeters ?? []} sensors={data.sensors ?? []} />}
             />
             <Route path="/pools" element={<PoolsPage poolRows={poolRows} />} />
+            <Route path="/ocean" element={<OceanPage base={base} />} />
             <Route
               path="/control"
               element={

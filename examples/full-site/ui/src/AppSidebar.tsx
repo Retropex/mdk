@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router";
 import {
   ContainerWidgetsNavIcon,
   DashboardNavIcon,
+  DatumOceanIcon,
   OperationsNavIcon,
   PoolsIcon,
   PowerIcon,
@@ -15,6 +16,7 @@ const NAV_ITEMS: SidebarMenuItem[] = [
   { id: "/containers", label: "Containers", icon: <ContainerWidgetsNavIcon /> },
   { id: "/monitoring", label: "Power & Sensors", icon: <OperationsNavIcon /> },
   { id: "/pools", label: "Pools", icon: <PoolsIcon /> },
+  { id: "/ocean", label: "Ocean & DATUM", icon: <DatumOceanIcon /> },
   { id: "/control", label: "Control", icon: <PowerIcon /> },
 ];
 
