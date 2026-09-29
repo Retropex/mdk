@@ -20,14 +20,15 @@ const NAV_ITEMS: SidebarMenuItem[] = [
   { id: "/control", label: "Control", icon: <PowerIcon /> },
 ];
 
-export function AppSidebar() {
+export function AppSidebar({ showOcean }: { showOcean: boolean }) {
   const location = useLocation();
   const navigate = useNavigate();
   const activeId = "/" + location.pathname.split("/")[1];
+  const items = showOcean ? NAV_ITEMS : NAV_ITEMS.filter((item) => item.id !== "/ocean");
 
   return (
     <Sidebar
-      items={NAV_ITEMS}
+      items={items}
       activeId={activeId}
       onItemClick={({ id }) => navigate(id)}
       defaultExpanded={true}

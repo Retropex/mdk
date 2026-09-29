@@ -310,7 +310,7 @@ export function SitePage(): JSX.Element {
       </AppHeader>
 
       <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
-        <AppSidebar />
+        <AppSidebar showOcean={data.pools.some((p) => p.poolType === "ocean")} />
 
         <main style={{ flex: 1, padding: 24, display: "flex", flexDirection: "column", gap: 20, minWidth: 0, overflowY: "auto" }}>
           <Routes>
